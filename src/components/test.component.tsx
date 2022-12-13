@@ -5,7 +5,6 @@ import { Test } from './test';
   tag: 'test-component',
   shadow: true,
 })
-export class TestComponent {
-  @Event({ bubbles: false }) works: EventEmitter<Array<Test>>;
-  @Event({ bubbles: false }) fails: EventEmitter<Test[]>;
+export class TestComponent<T> {
+  @Event({ bubbles: false }) missingGenericArgument: EventEmitter<Array<T>>;
 }

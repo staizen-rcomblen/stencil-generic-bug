@@ -5,7 +5,6 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { Test } from "./components/test";
 export namespace Components {
     interface TestComponent {
     }
@@ -27,8 +26,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface TestComponent {
-        "onFails"?: (event: TestComponentCustomEvent<Test[]>) => void;
-        "onWorks"?: (event: TestComponentCustomEvent<Array<Test>>) => void;
+        "onMissingGenericArgument"?: (event: TestComponentCustomEvent<Array<T>>) => void;
     }
     interface IntrinsicElements {
         "test-component": TestComponent;
